@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is Fibonacci</title>
+</head>
+<body>
+
+</body>
+<script>
+    function isFibonacci(number) {
+        let a = 0;
+        let b = 1;
+        let temp;
+        let array = [];
+        for (let i = 0; i < 1000; i++) {
+            array.push(a);
+            temp = a;
+            a = b;
+            b += temp;
+        }
+        let index = array.indexOf(number);
+        if (index === -1) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    console.log(isFibonacci(0));
+    console.log(isFibonacci(1));
+    console.log(isFibonacci(4));
+    console.log(isFibonacci(377));
+</script>
+</html>
